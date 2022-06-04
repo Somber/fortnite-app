@@ -1,16 +1,21 @@
 import React, { useState } from 'react'
+import AddPlayer from './AddPlayer';
+import Player from './Player';
+
 
 export default function FortniteApp() {
 
-    const [ players, setPlayers ] = useState(["s0mber_"]);
+    const [ players, setPlayer ] = useState(["s0mber_"]);
 
     return (
     <>
-        <div>FortniteApp</div>
+        <h2>FortniteApp</h2>
+        <hr/>
+        <AddPlayer setPlayer={setPlayer}/>
         <ol>
             {
                 players.map(player=>(
-                    <li>{player}</li>                    
+                    <Player key={player} player={player}/>
                 ))
             }
         </ol>
