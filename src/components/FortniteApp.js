@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function FortniteApp() {
-  return (
-    <div>FortniteApp</div>
+
+    const [ players, setPlayers ] = useState(["s0mber_"]);
+
+    return (
+    <>
+        <div>FortniteApp</div>
+        <ol>
+            {
+                players.map(player=>(
+                    <li>{player}</li>                    
+                ))
+            }
+        </ol>
+    </>
+
   )
 }
