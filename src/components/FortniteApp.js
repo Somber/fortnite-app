@@ -5,7 +5,7 @@ import Player from './Player';
 
 export default function FortniteApp() {
 
-    const [ players, setPlayer ] = useState(["s0mber_"]);
+    const [ players, setPlayer ] = useState([]);
 
     return (
     <>
