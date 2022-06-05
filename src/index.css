@@ -4,7 +4,7 @@
 
 body{
   padding: 60px;
-  background-color: #b4a8a8!important;
+  background-color: #e2dede!important;
 }
 
 input {
@@ -13,11 +13,13 @@ input {
   width: 100%;
 }
 
-
-.grid_players {
+.card {
+  background-color: rgb(176, 204, 179)!important;
   margin: 10px;
+  width: 400px;
 }
 
-.col{
-  margin-top: 10px!important;
+.grid {
+  display: flex;
+  flex-wrap: wrap;
 }

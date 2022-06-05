@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { Card, Container, Row, Col } from 'react-bootstrap';
+import { Col, Card} from 'react-bootstrap';
 import { getPlayer } from '../helpers/getPlayer';
-
+import { timeConvert } from '../helpers/timeConvert';
+import Moment from 'react-moment';
 
 export default function Player({player}) {
 
@@ -17,17 +18,18 @@ export default function Player({player}) {
 
   return (
       <>
-        <Card border="primary" style={{ width: '18rem' }}>
-          <Card.Header>{player}</Card.Header>
-          <Card.Body>
-            <Card.Title>K/D {playerState.overall ? playerState.overall.kd : ''}</Card.Title>
-            <Card.Text>
-              Ultima partida {playerState.overall ? playerState.overall.lastModified : ''}<br/>
-              Has matado a {playerState.overall ? playerState.overall.kills : 0} enemigos.<br/>
-              Has muerto {playerState.overall ? playerState.overall.deaths : 0} veces.
-            </Card.Text>
-          </Card.Body>
-        </Card>
+          <Card border="primary">
+            <Card.Header>{player} - Nivel {playerState.level ? playerState.level : 0}</Card.Header>
+            <Card.Body>
+              <Card.Title>K/D {playerState.overall ? playerState.overall.kd : ''}</Card.Title>
+              <Card.Text>
+                Tiempo jugado {playerState.overall ? timeConvert(playerState.overall.minutesPlayed) : ''}<br/>
+                Ultima partida {playerState.overall ? <Moment format="D \d\e MMM \d\e\l YYYY \a \l\a\s HH:mm:ss">{playerState.overall.lastModified}</Moment> : ''}<br/>
+                Ha matado {playerState.overall ? playerState.overall.kills : 0} enemigos.<br/>
+                Ha muerto {playerState.overall ? playerState.overall.deaths : 0} veces.
+              </Card.Text>
+            </Card.Body>
+          </Card>
       </>
     
   )
