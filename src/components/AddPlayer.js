@@ -13,7 +13,7 @@ export default function AddPlayer({setPlayer}) {
     e.preventDefault();
 
     if (inputValue.length>2){
-      setPlayer(players=>[...players, inputValue]);  
+      setPlayer(players=>[inputValue, ...players]);  
     }
 
     setinputValue("");
@@ -22,7 +22,9 @@ export default function AddPlayer({setPlayer}) {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input
+        <label htmlFor="inputSearch">Buscar Jugador</label>
+        <input 
+          id='inputSearch'
           type="text"
           value={inputValue}
           onChange={handleInputChange}

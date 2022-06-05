@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import AddPlayer from './AddPlayer';
 import Player from './Player';
-import { Container, Row } from 'react-bootstrap';
-
 
 export default function FortniteApp() {
 
