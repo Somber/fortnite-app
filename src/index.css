@@ -4,10 +4,20 @@
 
 body{
   padding: 60px;
+  background-color: #b4a8a8!important;
 }
 
 input {
   color: gray;
   font-size: 1.3rem;
   width: 100%;
+}
+
+
+.grid_players {
+  margin: 10px;
+}
+
+.col{
+  margin-top: 10px!important;
 }

@@ -14,7 +14,7 @@ export default function FortniteApp() {
         <hr/>
         <AddPlayer setPlayer={setPlayer}/>
 
-        <Container>
+        <Container className='grid_players'>
           <Row>
                 {
                   players.map(player=>(
