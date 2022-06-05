@@ -18,7 +18,7 @@ export default function FortniteApp() {
           <Row>
                 {
                   players.map(player=>(
-                    <Col><Player key={player} player={player}/></Col>
+                    <Col key={player}><Player player={player}/></Col>
                   ))
                 }
           </Row>
