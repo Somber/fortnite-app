@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Card, Row, Col } from 'react-bootstrap';
+import { Card, Container, Row, Col } from 'react-bootstrap';
 import { getPlayer } from '../helpers/getPlayer';
 
 
@@ -22,13 +22,9 @@ export default function Player({player}) {
           <Card.Body>
             <Card.Title>K/D {playerState.overall ? playerState.overall.kd : ''}</Card.Title>
             <Card.Text>
-            <Row>
-              <Col>Ultima partida {playerState.overall ? playerState.overall.lastModified : ''}<br/></Col>              
-            </Row>
-            <Row>
-                <Col>Has matado a {playerState.overall ? playerState.overall.kills : 0} enemigos.<br/></Col>
-                <Col>Has muerto {playerState.overall ? playerState.overall.deaths : 0} veces.</Col>
-                </Row>
+              Ultima partida {playerState.overall ? playerState.overall.lastModified : ''}<br/>
+              Has matado a {playerState.overall ? playerState.overall.kills : 0} enemigos.<br/>
+              Has muerto {playerState.overall ? playerState.overall.deaths : 0} veces.
             </Card.Text>
           </Card.Body>
         </Card>
