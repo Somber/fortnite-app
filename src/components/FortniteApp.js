@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import AddPlayer from './AddPlayer';
 import Player from './Player';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 
 
 export default function FortniteApp() {
@@ -13,19 +13,14 @@ export default function FortniteApp() {
         <h2>FortniteApp</h2>
         <hr/>
         <AddPlayer setPlayer={setPlayer}/>
+        <div className='grid'>
+          {
+            players.map(player=>(
+              <Player key={player} player={player}/>
+            ))
+          }
+        </div>
 
-        <Container className='grid_players'>
-          <Row>
-                {
-                  players.map(player=>(
-                    <Col key={player}><Player player={player}/></Col>
-                  ))
-                }
-          </Row>
-        </Container>
-
-        <ol>
-        </ol>
     </>
 
   )
