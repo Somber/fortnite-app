@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default function AddPlayer({setPlayer}) {
 
-  const [inputValue, setinputValue] = useState('s0mber_');
+  const [inputValue, setinputValue] = useState('');
 
   const handleInputChange = (e) => {
     setinputValue(e.target.value)
