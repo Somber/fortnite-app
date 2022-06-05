@@ -24,7 +24,7 @@ export default function Player({player}) {
               <Card.Title>K/D {playerState.overall ? playerState.overall.kd : ''}</Card.Title>
               <Card.Text>
                 Tiempo jugado {playerState.overall ? timeConvert(playerState.overall.minutesPlayed) : ''}<br/>
-                Ultima partida {playerState.overall ? <Moment format="D \d\e MMM \d\e\l YYYY \a \l\a\s HH:mm:ss">{playerState.overall.lastModified}</Moment> : ''}<br/>
+                Ultima partida {playerState.overall ? <Moment format="D \d\e MMM \d\e\l YYYY HH:mm:ss">{playerState.overall.lastModified}</Moment> : ''}<br/>
                 Ha matado {playerState.overall ? playerState.overall.kills : 0} enemigos.<br/>
                 Ha muerto {playerState.overall ? playerState.overall.deaths : 0} veces.
               </Card.Text>

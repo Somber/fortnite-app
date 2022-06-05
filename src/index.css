@@ -1,5 +1,6 @@
 * {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Roboto";
+  font-family: 'Spline Sans Mono', monospace,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 body{
@@ -10,13 +11,18 @@ body{
 input {
   color: gray;
   font-size: 1.3rem;
-  width: 100%;
+  width: 250px;
+  margin-left: 10px!important;
 }
 
 .card {
-  background-color: rgb(176, 204, 179)!important;
+  background-color: rgb(234, 238, 234)!important;
   margin: 10px;
-  width: 400px;
+  width: 450px;
+}
+
+.card-header {
+  background-color: rgb(171, 213, 230)!important;
 }
 
 .grid {

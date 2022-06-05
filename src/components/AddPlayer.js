@@ -22,7 +22,9 @@ export default function AddPlayer({setPlayer}) {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input
+        <label htmlFor="inputSearch">Buscar Jugador</label>
+        <input 
+          id='inputSearch'
           type="text"
           value={inputValue}
           onChange={handleInputChange}
