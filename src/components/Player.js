@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { Card } from 'react-bootstrap';
+
 
 export default function Player({player}) {
 
@@ -42,15 +44,19 @@ export default function Player({player}) {
   
   return (
       <>
-
-        <h3>{player} Nivel {playerState.level ? playerState.level : 0}</h3>
-        <p>Ultima partida {playerState.overall ? playerState.overall.lastModified : ''}</p>
-        <p>K/D {playerState.overall ? playerState.overall.kd : ''}</p>
-        <p>
-            Has matado a {playerState.overall ? playerState.overall.kills : 0} enemigos.  
-            Has muerto {playerState.overall ? playerState.overall.deaths : 0} veces.
-        </p>
-
+        <Card border="primary" style={{ width: '18rem' }}>
+          <Card.Header>{player}</Card.Header>
+          <Card.Body>
+            <Card.Title>K/D {playerState.overall ? playerState.overall.kd : ''}</Card.Title>
+            <Card.Text>
+              <p>Ultima partida {playerState.overall ? playerState.overall.lastModified : ''}</p>
+              <p>
+                Has matado a {playerState.overall ? playerState.overall.kills : 0} enemigos.  
+                Has muerto {playerState.overall ? playerState.overall.deaths : 0} veces.
+              </p>
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </>
     
   )
