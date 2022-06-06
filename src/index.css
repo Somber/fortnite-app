@@ -2,11 +2,12 @@
   font-family: 'Spline Sans Mono', monospace,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-body{
+body {
   background-color: rgb(18, 45, 134)!important;
   padding: 50px;
   padding-top: 10px;
 }
+
 
 form label {
   color: rgb(255, 255, 255);
@@ -26,6 +27,7 @@ form label {
   width: 100%;
   border: 1px solid rgb(70, 77, 53);
 }
+
 input {
   background-color: rgb(163, 176, 221);
   color: rgb(255, 255, 255);
@@ -40,12 +42,22 @@ input {
   margin-left: 0;
   margin-right: 20px;
   margin-top: 25px;
-  width: 325px;
+  width: 400px;
 }
 
 .card-header {
   background-color: rgb(78, 103, 194)!important;
   color: rgb(255, 255, 255);
+  justify-content: space-between;
+}
+
+.card-header .row_player_detail{
+  font-size: 0.6rem!important;
+}
+
+.card-header .row_player_detail span {
+  font-weight: bolder;
+  justify-content: space-between;
 }
 
 .card-title {
@@ -70,6 +82,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   font-size: 0.7rem;
+  justify-content: space-between;
 }
 
 .card_score p {
@@ -87,6 +100,6 @@ input {
 }
 
 .score_text {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: bolder;
 }

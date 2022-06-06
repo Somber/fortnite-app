@@ -21,7 +21,6 @@ export default function Score({overall}) {
         <Card.Text>
           {/* <img className='score_img' src={deathImg} alt="Las veces que ha muerto"></img> <span className='score_text'>{deaths}</span>        */}          
           <span className='score_text'>Deaths {overall ? overall.deaths : 0}</span> 
-
         </Card.Text>  
       </Card.Text>
     </>

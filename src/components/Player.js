@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Card} from 'react-bootstrap';
+import { Card, Container, Row, Col } from 'react-bootstrap';
 import { getPlayer } from '../helpers/getPlayer';
 import { timeConvert } from '../helpers/timeConvert';
 import Moment from 'react-moment';
@@ -20,16 +20,22 @@ export default function Player({player}) {
   return (
       <>
           <Card border="primary">
-            <Card.Header>
-              {player} - Nivel {playerState.level ? playerState.level : 0}
-              <Card.Text className='card_lastgame'>
-                <Card.Text>
-                <span>Ultima partida</span> {playerState.overall ? <Moment format="D MMM YYYY HH:mm:ss">{playerState.overall.lastModified}</Moment> : ''} 
-                </Card.Text>              
-                <Card.Text>
-                  <span>Tiempo jugado</span> {playerState.overall ? timeConvert(playerState.overall.minutesPlayed) : ''}
-                </Card.Text>              
-              </Card.Text>
+            <Card.Header className='card_header'>
+              <Container>
+                <Row className='row_player_main'>
+                  <Col>
+                    <span>{player} - Nivel {playerState.level ? playerState.level : 0}</span>
+                  </Col>
+                </Row>
+                <Row className='row_player_detail'>
+                  <Col xs={7}>
+                    <span>Última Partida</span> {playerState.overall ? <Moment format="D MMM YYYY HH:mm:ss">{playerState.overall.lastModified}</Moment> : ''} 
+                  </Col>
+                  <Col>
+                    <span>Tiempo Jugado</span> {playerState.overall ? timeConvert(playerState.overall.minutesPlayed) : ''}
+                  </Col>
+                </Row>
+              </Container>
             </Card.Header>
             <Card.Body>
               <Score 
@@ -37,6 +43,7 @@ export default function Player({player}) {
               />
               <Card.Title>K/D {playerState.overall ? playerState.overall.kd : ''}</Card.Title>
             </Card.Body>
+
           </Card>
       </>
     
