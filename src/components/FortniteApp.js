@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import AddPlayer from './AddPlayer';
 import Player from './Player';
+// import logoImg from '../images/logo_n.jpg';
 
 export default function FortniteApp() {
 
