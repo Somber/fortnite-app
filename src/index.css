@@ -3,21 +3,35 @@
 }
 
 body{
-  background-color: #e2dede!important;
+  background-color: rgb(203, 230, 236)!important;
   padding: 60px;
+}
+
+.title_app {
+  background-color: rgb(171, 213, 230);
+  background-image: url(./images/logo.jpg);
+  border: 2px solid rgb(48, 110, 126);
+  border-radius: 0.25rem;
+  color: rgb(171, 183, 207);
+  font-weight: bolder;
+  padding: 10px;
+  text-align: center;
 }
 
 input {
   color: gray;
   font-size: 1.3rem;
   margin-left: 10px!important;
+  margin-top: 10px!important;
   width: 250px;
 }
 
 .card {
   background-color: rgb(234, 238, 234)!important;
-  margin: 10px;
-  width: 355px;
+  margin-left: 0;
+  margin-right: 20px;
+  margin-top: 25px;
+  width: 325px;
 }
 
 .card-header {

@@ -8,7 +8,7 @@ export default function FortniteApp() {
 
     return (
     <>
-        <h2>FortniteApp</h2>
+        <h2 className='title_app'>Fortnite Comparador</h2>
         <hr/>
         <AddPlayer setPlayer={setPlayer}/>
         <div className='grid'>
