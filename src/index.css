@@ -49,7 +49,7 @@ input {
 }
 
 .card-title {
-  color: green;
+  color: rgb(71, 109, 71);
   font-size: 2rem!important;
   font-weight: bold!important;
   text-align: center;
@@ -69,10 +69,12 @@ input {
 .card_score {
   display: flex;
   flex-wrap: wrap;
+  font-size: 0.7rem;
 }
 
 .card_score p {
-  margin-right: 30px;
+  margin: 10px;
+  margin-top:0;
 }
 
 .grid {
@@ -85,5 +87,6 @@ input {
 }
 
 .score_text {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  font-weight: bolder;
 }

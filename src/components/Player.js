@@ -33,8 +33,7 @@ export default function Player({player}) {
             </Card.Header>
             <Card.Body>
               <Score 
-                kills = {playerState.overall ? playerState.overall.kills : 0}
-                deaths = {playerState.overall ? playerState.overall.deaths : 0}
+                overall = {playerState.overall ? playerState.overall: null}
               />
               <Card.Title>K/D {playerState.overall ? playerState.overall.kd : ''}</Card.Title>
             </Card.Body>
