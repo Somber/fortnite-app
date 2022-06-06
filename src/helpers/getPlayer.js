@@ -1,6 +1,6 @@
 export const getPlayer = async (player)=>{
    
-    const url = 'https://fortnite-api.com/v2/stats/br/v2?name='+player;  
+    const url = `https://fortnite-api.com/v2/stats/br/v2?name=${player}&timeWindow=season`;  
 
     const resp = await fetch(url, {
       headers: {
