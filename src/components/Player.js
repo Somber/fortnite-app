@@ -3,8 +3,6 @@ import { Card} from 'react-bootstrap';
 import { getPlayer } from '../helpers/getPlayer';
 import { timeConvert } from '../helpers/timeConvert';
 import Moment from 'react-moment';
-import deathImg from '../images/deaths.jpg';
-import killImg from '../images/kills.png';
 import Score from './Score';
 
 export default function Player({player}) {
@@ -26,7 +24,7 @@ export default function Player({player}) {
               {player} - Nivel {playerState.level ? playerState.level : 0}
               <Card.Text className='card_lastgame'>
                 <Card.Text>
-                <span>Ultima partida</span> {playerState.overall ? <Moment format="D \d\e MMM \d\e\l YYYY HH:mm:ss">{playerState.overall.lastModified}</Moment> : ''} 
+                <span>Ultima partida</span> {playerState.overall ? <Moment format="D MMM YYYY HH:mm:ss">{playerState.overall.lastModified}</Moment> : ''} 
                 </Card.Text>              
                 <Card.Text>
                   <span>Tiempo jugado</span> {playerState.overall ? timeConvert(playerState.overall.minutesPlayed) : ''}

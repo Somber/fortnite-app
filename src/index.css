@@ -17,7 +17,7 @@ input {
 .card {
   background-color: rgb(234, 238, 234)!important;
   margin: 10px;
-  width: 450px;
+  width: 355px;
 }
 
 .card-header {
@@ -58,4 +58,8 @@ input {
 
 .score_img {
   width: 32px;
+}
+
+.score_text {
+  font-size: 0.8rem;
 }
