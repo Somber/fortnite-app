@@ -3,21 +3,20 @@
 }
 
 body{
-  background-color: rgb(203, 230, 236)!important;
+  background-color: rgb(18, 45, 134)!important;
   padding: 50px;
   padding-top: 10px;
 }
 
 form label {
-  color: rgb(110, 130, 168);
+  color: rgb(255, 255, 255);
 }
 
 .title_app {
-  background-color: rgb(171, 213, 230);
   background-image: url(./images/logo-1.jpg);
-  border: 1px solid rgb(48, 110, 126);
+  border: 1px solid rgb(70, 77, 53);
   border-radius: 0.25rem;
-  color: rgb(171, 183, 207);
+  color: rgb(178, 187, 156);
   font-weight: bolder;
   padding: 10px;
   text-align: center;
@@ -25,10 +24,11 @@ form label {
 
 .logo {
   width: 100%;
-  border: 1px solid rgb(48, 110, 126);
+  border: 1px solid rgb(70, 77, 53);
 }
 input {
-  color: gray;
+  background-color: rgb(163, 176, 221);
+  color: rgb(255, 255, 255);
   font-size: 1.3rem;
   margin-left: 10px!important;
   margin-top: 10px!important;
@@ -36,7 +36,7 @@ input {
 }
 
 .card {
-  background-color: rgb(234, 238, 234)!important;
+  background-color: rgb(163, 176, 221)!important;
   margin-left: 0;
   margin-right: 20px;
   margin-top: 25px;
@@ -44,7 +44,8 @@ input {
 }
 
 .card-header {
-  background-color: rgb(171, 213, 230)!important;
+  background-color: rgb(78, 103, 194)!important;
+  color: rgb(255, 255, 255);
 }
 
 .card-title {
