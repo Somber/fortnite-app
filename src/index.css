@@ -4,11 +4,12 @@
 
 body{
   background-color: rgb(203, 230, 236)!important;
-  padding: 60px;
+  padding: 50px;
+  padding-top: 10px;
 }
 
 form label {
-  color: rgb(171, 183, 207);
+  color: rgb(110, 130, 168);
 }
 
 .title_app {
