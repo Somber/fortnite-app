@@ -78,16 +78,17 @@ input {
   font-weight: bolder;
 }
 
-.card_score {
+.card_score .row{
   display: flex;
   flex-wrap: wrap;
   font-size: 0.7rem;
   justify-content: space-between;
 }
 
-.card_score p {
+.card_score .col {
   margin: 10px;
   margin-top:0;
+  padding: 0;
 }
 
 .grid {

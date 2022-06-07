@@ -8,15 +8,15 @@ export default function FortniteApp() {
     const [ players, setPlayer ] = useState([]);
 
     useEffect(()=>{
-      const playersTmp = localStorage.getItem('players');
-      console.log();
-      setPlayer(playersTmp.split(','));
-      console.log(players);
 
+      const playersTmp = localStorage.getItem('players');
+      setPlayer(playersTmp.split(','));
+    
       setInterval(()=>{
         console.log("mi intervalo");
-      }, 2000);
-           
+        const playersTmp = localStorage.getItem('players');
+        setPlayer(playersTmp.split(','));
+      }, 60000);
     }, []);
     
     return (
