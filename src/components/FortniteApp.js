@@ -10,12 +10,12 @@ export default function FortniteApp() {
     useEffect(()=>{
 
       const playersTmp = localStorage.getItem('players');
-      setPlayer(playersTmp.split(','));
+      if (playersTmp) setPlayer(playersTmp.split(','));
     
       setInterval(()=>{
         console.log("mi intervalo");
         const playersTmp = localStorage.getItem('players');
-        setPlayer(playersTmp.split(','));
+        if (playersTmp) setPlayer(playersTmp.split(','));
       }, 60000);
     }, []);
     
@@ -27,7 +27,7 @@ export default function FortniteApp() {
         <div className='grid'>
           {
             players.map(player=>(
-              <Player key={player} player={player}/>
+              <Player setPlayer={setPlayer} key={player} player={player}/>
             ))
           }
         </div>
