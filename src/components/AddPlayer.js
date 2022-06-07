@@ -13,7 +13,12 @@ export default function AddPlayer({setPlayer}) {
     e.preventDefault();
 
     if (inputValue.length>2){
-      setPlayer(players=>[inputValue, ...players]);  
+      setPlayer(players=> {
+        const result = [inputValue, ...players];
+        localStorage.setItem('players', result)
+        return result;
+      });  
+      
     }
 
     setinputValue("");

@@ -11,11 +11,11 @@ export const getPlayer = async (player)=>{
 
     const {data} = await resp.json();
 
-
+    
     const playerObj = {
-        name: data.account.name,
-        level: data.battlePass.level,
-        overall: data.stats.all.overall,
+        name: player,
+        level: data ? data.battlePass.level : 0,
+        overall: data ? data.stats.all.overall : null,
     };
     
     return playerObj;
