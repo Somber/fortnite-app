@@ -9,20 +9,20 @@ export default function ScoreOverall({overall}) {
       <Container className='card_score'>
         <Row>
           <Col>
-            <span className='score_text '>Matches {overall ? overall.matches : 0}</span>
+            <span className='score_text '>Matches<br/> {overall ? overall.matches : 0}</span>
           </Col>
           <Col className='right'>
-            <span className='score_text'>Wins {overall ? overall.wins : 0}</span>          
+            <span className='score_text'>Wins<br/> {overall ? overall.wins : 0}</span>          
           </Col>
         </Row>
         <Row>
           <Col>
             {/* <img className='score_img' src={killImg} alt="Las veces que ha matado"></img> <span className='score_text'>{kills}</span>        */}
-            <span className='score_text'>Kills {overall ? overall.kills : 0}</span> 
+            <span className='score_text'>Kills<br/> {overall ? overall.kills : 0}</span> 
           </Col>
           <Col className='right'>
             {/* <img className='score_img' src={deathImg} alt="Las veces que ha muerto"></img> <span className='score_text'>{deaths}</span>        */}          
-            <span className='score_text'>Deaths {overall ? overall.deaths : 0}</span> 
+            <span className='score_text'>Deaths<br/> {overall ? overall.deaths : 0}</span> 
           </Col>
         </Row>
       </Container>

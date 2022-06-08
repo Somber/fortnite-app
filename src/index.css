@@ -41,12 +41,15 @@ input {
   width: 250px;
 }
 
+.col {
+  margin:0!important;
+}
 .card {
   background-color: rgb(163, 176, 221)!important;
   margin-left: 0;
   margin-right: 20px;
   margin-top: 25px;
-  width: 350px;
+  width: 520px;
 }
 
 .card-header {
@@ -87,7 +90,9 @@ input {
   display: flex;
   flex-wrap: wrap;
   font-size: 0.7rem;
+  text-align: center;
 }
+
 
 .card_score .col {
   margin: 10px;
@@ -119,5 +124,10 @@ input {
 
 .score_text {
   font-size: 0.8rem;
+  font-weight: bolder;
+}
+
+.score_text_partial {
+  font-size: 0.60rem;
   font-weight: bolder;
 }

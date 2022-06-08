@@ -4,6 +4,7 @@ import { getPlayer } from '../helpers/getPlayer';
 import { timeConvert } from '../helpers/timeConvert';
 import Moment from 'react-moment';
 import Overall from './Overall';
+import Partial from './Partial';
 
 
 export default function Player({player, setPlayer}) {
@@ -57,14 +58,27 @@ export default function Player({player, setPlayer}) {
             </Card.Header>
             <Card.Body>
               <Row>
-                <Col>
+                <Col xs={4}>
                   <Overall playerState={playerState}/>
                 </Col>
-                <Col>
-                
+                <Col xs={8}>
+                  <Row>
+                    <Col>
+                      Solo <Partial playerState={playerState.solo}/>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      Due <Partial playerState={playerState.duo}/>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      Squad <Partial playerState={playerState.squad}/>
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
-              
             </Card.Body>
 
           </Card>
