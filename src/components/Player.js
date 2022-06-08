@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import { getPlayer } from '../helpers/getPlayer';
 import { timeConvert } from '../helpers/timeConvert';
 import Moment from 'react-moment';
-import Score from './Score';
+import Overall from './Overall';
+
 
 export default function Player({player, setPlayer}) {
 
@@ -23,9 +24,7 @@ export default function Player({player, setPlayer}) {
       
       setPlayer(players=> {
         const newPlayers = players.filter((p)=>{
-            if (p != player){
-              return p;
-            } 
+          return p !== player;
         });
 
         localStorage.setItem('players', newPlayers)
@@ -48,20 +47,24 @@ export default function Player({player, setPlayer}) {
                 </Row>
                 <Row className='row_player_detail'>
                   <Col xs={7}>
-                    <span>Última Partida</span> {playerState.overall ? <Moment format="D MMM YYYY HH:mm:ss">{playerState.overall.lastModified}</Moment> : ''} 
+                    <span>Última Partida</span><br/>{playerState.overall ? <Moment format="D MMM YYYY HH:mm:ss">{playerState.overall.lastModified}</Moment> : ''} 
                   </Col>
                   <Col xs={5}>
-                    <span>Tiempo Jugado</span> {playerState.overall ? timeConvert(playerState.overall.minutesPlayed) : ''}
+                    <span>Tiempo Jugado</span><br/>{playerState.overall ? timeConvert(playerState.overall.minutesPlayed) : ''}
                   </Col>
-
                 </Row>
               </Container>
             </Card.Header>
             <Card.Body>
-              <Score 
-                overall = {playerState.overall ? playerState.overall: null}
-              />
-              <Card.Title>K/D {playerState.overall ? playerState.overall.kd : ''}</Card.Title>
+              <Row>
+                <Col>
+                  <Overall playerState={playerState}/>
+                </Col>
+                <Col>
+                
+                </Col>
+              </Row>
+              
             </Card.Body>
 
           </Card>

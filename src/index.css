@@ -46,7 +46,7 @@ input {
   margin-left: 0;
   margin-right: 20px;
   margin-top: 25px;
-  width: 400px;
+  width: 350px;
 }
 
 .card-header {
@@ -87,13 +87,16 @@ input {
   display: flex;
   flex-wrap: wrap;
   font-size: 0.7rem;
-  justify-content: space-between;
 }
 
 .card_score .col {
   margin: 10px;
   margin-top:0;
   padding: 0;
+}
+
+.right {
+  text-align: right;
 }
 
 .card_close {

@@ -10,17 +10,17 @@ export const getPlayer = async (player)=>{
     });
 
     const {data} = await resp.json();
-
-    
+   
     const playerObj = {
         name: player,
         level: data ? data.battlePass.level : 0,
         overall: data ? data.stats.all.overall : null,
+        solo: data ? data.stats.all.solo : null,
+        duo: data ? data.stats.all.duo : null,
+        squad: data ? data.stats.all.squad : null,
+
     };
-    
-    
-    //setTimeout(() => {  console.log("temporizador"); }, 2000);
-    
+
     return playerObj;
 
   }
