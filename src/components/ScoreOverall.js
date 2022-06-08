@@ -1,7 +1,9 @@
 import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap';
-// import deathImg from '../images/deaths.jpg';
-// import killImg from '../images/kills.jpg';
+import deathImg from '../images/deaths.png';
+import killImg from '../images/kills.png';
+import winImg from '../images/wins.png';
+import matchImg from '../images/matches.png';
 
 export default function ScoreOverall({overall}) {
   return (
@@ -9,20 +11,45 @@ export default function ScoreOverall({overall}) {
       <Container className='card_score'>
         <Row>
           <Col>
-            <span className='score_text '>Matches<br/> {overall ? overall.matches : 0}</span>
+            <Row>
+              <Col>
+                <img className='score_img' src={matchImg} alt="Partidas jugadas"></img>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <span className='score_text '>{overall ? overall.matches : 0}</span>
+              </Col>
+            </Row>
           </Col>
-          <Col className='right'>
-            <span className='score_text'>Wins<br/> {overall ? overall.wins : 0}</span>          
-          </Col>
-        </Row>
-        <Row>
           <Col>
-            {/* <img className='score_img' src={killImg} alt="Las veces que ha matado"></img> <span className='score_text'>{kills}</span>        */}
-            <span className='score_text'>Kills<br/> {overall ? overall.kills : 0}</span> 
+            <Row>
+              <Col>
+                <img className='score_img' src={winImg} alt="Partidas ganadas"></img>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <span className='score_text'>{overall ? overall.wins : 0}</span>          
+              </Col>
+            </Row>
           </Col>
-          <Col className='right'>
-            {/* <img className='score_img' src={deathImg} alt="Las veces que ha muerto"></img> <span className='score_text'>{deaths}</span>        */}          
-            <span className='score_text'>Deaths<br/> {overall ? overall.deaths : 0}</span> 
+          <Col>
+            <Row>
+              <Col>
+                <img className='score_img' src={killImg} alt="Bajas realizadas"></img>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <span className='score_text'>{overall ? overall.kills : 0}</span> 
+              </Col>
+            </Row>
+            
+          </Col>
+          <Col>
+            <img className='score_img' src={deathImg} alt="Muertes"></img>
+            <span className='score_text'>{overall ? overall.deaths : 0}</span> <br/>
           </Col>
         </Row>
       </Container>
