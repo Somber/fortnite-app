@@ -18,6 +18,9 @@ export const getPlayer = async (player)=>{
         overall: data ? data.stats.all.overall : null,
     };
     
+    
+    setTimeout(() => {  console.log("temporizador"); }, 2000);
+    
     return playerObj;
 
   }

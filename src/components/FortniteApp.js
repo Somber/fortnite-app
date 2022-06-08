@@ -8,10 +8,8 @@ export default function FortniteApp() {
     const [ players, setPlayer ] = useState([]);
 
     useEffect(()=>{
-
       const playersTmp = localStorage.getItem('players');
       if (playersTmp) setPlayer(playersTmp.split(','));
-    
       setInterval(()=>{
         console.log("mi intervalo");
         const playersTmp = localStorage.getItem('players');
@@ -21,7 +19,7 @@ export default function FortniteApp() {
     
     return (
     <>
-        <h2 className='title_app'>Comparador</h2>
+        <h2 className='title_app'>Fortnite Comparador<h3 className='subtitle_app'>by MarcGalarga</h3></h2>
         <hr/>
         <AddPlayer setPlayer={setPlayer}/>
         <div className='grid'>

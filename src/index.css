@@ -23,6 +23,10 @@ form label {
   text-align: center;
 }
 
+.subtitle_app {
+  font-size: 0.6rem!important;
+}
+
 .logo {
   width: 100%;
   border: 1px solid rgb(70, 77, 53);

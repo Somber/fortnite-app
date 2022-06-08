@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 export default function AddPlayer({setPlayer}) {
 
+  const LIMIT_CARDS = 3;
+
   const [inputValue, setinputValue] = useState('');
 
   const handleInputChange = (e) => {
@@ -14,7 +16,13 @@ export default function AddPlayer({setPlayer}) {
 
     if (inputValue.length>2){
       setPlayer(players=> {
-        const result = [inputValue, ...players];
+        const playersTemp = players.map((p)=>p);
+
+        if (players.length>=LIMIT_CARDS){
+          playersTemp.pop()
+        } 
+
+        const result = [inputValue, ...playersTemp];
         localStorage.setItem('players', result)
         return result;
       });  
