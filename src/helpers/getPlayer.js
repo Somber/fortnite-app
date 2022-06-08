@@ -19,7 +19,7 @@ export const getPlayer = async (player)=>{
     };
     
     
-    setTimeout(() => {  console.log("temporizador"); }, 2000);
+    //setTimeout(() => {  console.log("temporizador"); }, 2000);
     
     return playerObj;
 
