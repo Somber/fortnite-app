@@ -14,7 +14,7 @@ form label {
 }
 
 .title_app {
-  background-image: url(./images/logo-1.jpg);
+  background-image: url(./images/logo.jpg);
   border: 1px solid rgb(70, 77, 53);
   border-radius: 0.25rem;
   color: rgb(178, 187, 156);
@@ -68,8 +68,9 @@ input {
 }
 
 .card-title {
+  margin-top: 10px!important;
   color: rgb(71, 109, 71);
-  font-size: 2rem!important;
+  font-size: 1.5rem!important;
   font-weight: bold!important;
   text-align: center;
 }
@@ -139,6 +140,13 @@ input {
 .row_score_bck_squad .label_type {
   color: rgb(214, 30, 208);
 }
+
+.row_partial_kd {
+  color: green;
+  font-weight: bolder;
+  font-size: 0.8rem;
+}
+
 /* RESPONSIVE
    ========================================================================= */
  

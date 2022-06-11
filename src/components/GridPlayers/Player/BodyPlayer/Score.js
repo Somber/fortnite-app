@@ -61,7 +61,7 @@ export default function Score({partial}) {
             </Row>
           </Col>
         </Row>
-        <Row>
+        <Row className='row_partial_kd'>
           <Col>
             <span>K/D: {partial ? partial.kd : 0}</span> 
           </Col>
