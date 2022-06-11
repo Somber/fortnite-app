@@ -14,48 +14,48 @@ export default function ScoreOverall({overall}) {
           <Col>
             <Row>
               <Col>
-                <img data-tip="Partidas jugadas" className='score_img' src={matchImg} alt="Partidas jugadas"></img>
+                <img data-tip="Partidas jugadas" className='score_overall_img' src={matchImg} alt="Partidas jugadas"></img>
               </Col>
             </Row>
             <Row>
               <Col>
-                <span data-tip="Partidas jugadas" className='score_text '>{overall ? overall.matches : 0}</span>
-              </Col>
-            </Row>
-          </Col>
-          <Col>
-            <Row>
-              <Col>
-                <img data-tip="Partidas ganadas" className='score_img' src={winImg} alt="Partidas ganadas"></img>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <span data-tip="Partidas ganadas" className='score_text'>{overall ? overall.wins : 0}</span>          
+                <span data-tip="Partidas jugadas" className='score_overall_text '>{overall ? overall.matches : 0}</span>
               </Col>
             </Row>
           </Col>
           <Col>
             <Row>
               <Col>
-                <img data-tip="Bajas realizadas" className='score_img' src={killImg} alt="Bajas realizadas"></img>
+                <img data-tip="Partidas ganadas" className='score_overall_img' src={winImg} alt="Partidas ganadas"></img>
               </Col>
             </Row>
             <Row>
               <Col>
-                <span data-tip="Bajas realizadas" className='score_text'>{overall ? overall.kills : 0}</span> 
+                <span data-tip="Partidas ganadas" className='score_overall_text'>{overall ? overall.wins : 0}</span>          
               </Col>
             </Row>
           </Col>
           <Col>
             <Row>
               <Col>
-                <img data-tip="Muertes" className='score_img' src={deathImg} alt="Muertes"></img>
+                <img data-tip="Bajas realizadas" className='score_overall_img' src={killImg} alt="Bajas realizadas"></img>
               </Col>
             </Row>
             <Row>
               <Col>
-                <span data-tip="Muertes" className='score_text'>{overall ? overall.deaths : 0}</span> 
+                <span data-tip="Bajas realizadas" className='score_overall_text'>{overall ? overall.kills : 0}</span> 
+              </Col>
+            </Row>
+          </Col>
+          <Col>
+            <Row>
+              <Col>
+                <img data-tip="Muertes" className='score_overall_img' src={deathImg} alt="Muertes"></img>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <span data-tip="Muertes" className='score_overall_text'>{overall ? overall.deaths : 0}</span> 
               </Col>
             </Row>
           </Col>
