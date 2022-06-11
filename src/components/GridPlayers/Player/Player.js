@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Card } from 'react-bootstrap';
-import { getPlayer } from '../helpers/getPlayer';
-import { BodyPlayer } from './BodyPlayer';
+import { getPlayer } from '../../../helpers/getPlayer';
+import { BodyPlayer } from './BodyPlayer/BodyPlayer';
 import { HeaderPlayer } from './HeaderPlayer';
 
 

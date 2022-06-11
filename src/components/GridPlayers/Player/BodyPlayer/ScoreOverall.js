@@ -1,9 +1,9 @@
 import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap';
-import deathImg from '../images/deaths.png';
-import killImg from '../images/kills.png';
-import winImg from '../images/wins.png';
-import matchImg from '../images/matches.png';
+import deathImg from '../../../../images/deaths.png';
+import killImg from '../../../../images/kills.png';
+import winImg from '../../../../images/wins.png';
+import matchImg from '../../../../images/matches.png';
 import ReactTooltip from 'react-tooltip';
 
 export default function ScoreOverall({overall}) {

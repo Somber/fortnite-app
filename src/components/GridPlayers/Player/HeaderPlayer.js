@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import Moment from 'react-moment';
-import { timeConvert } from '../helpers/timeConvert';
+import { timeConvert } from '../../../helpers/timeConvert';
 
 export const HeaderPlayer = ({player, playerState, setPlayer}) => {
 

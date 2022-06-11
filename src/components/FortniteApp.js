@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import AddPlayer from './AddPlayer';
-import { GridPlayers } from './GridPlayers';
+import { GridPlayers } from './GridPlayers/GridPlayers';
 
 
 export default function FortniteApp() {
