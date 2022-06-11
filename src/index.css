@@ -49,7 +49,7 @@ input {
   margin-left: 0;
   margin-right: 20px;
   margin-top: 25px;
-  width: 260px;
+  width: 300px;
 }
 
 .card-header {
@@ -187,6 +187,11 @@ input {
 /* Móviles en vertical
    ------------------------------------------------------------------------- */
 @media (max-width: 480px) {  /* xs */
+
+  .card {
+    width: 100%;
+  }
+
   
   
 }
