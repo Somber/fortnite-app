@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import AddPlayer from './AddPlayer';
-import Player from './Player';
-// import logoImg from '../images/logo_n.jpg';
+import { GridPlayers } from './GridPlayers';
+
 
 export default function FortniteApp() {
 
@@ -21,14 +21,7 @@ export default function FortniteApp() {
         <h2 className='title_app'>Fortnite Comparador<br/><span className='subtitle_app'>by MarcGalarga</span></h2>
         <hr/>
         <AddPlayer setPlayer={setPlayer}/>
-        <div className='grid'>
-          {
-            players.map(player=>(
-              <Player setPlayer={setPlayer} key={player} player={player}/>
-            ))
-          }
-        </div>
-
+        <GridPlayers players={players} setPlayer={setPlayer}/>
     </>
 
   )
