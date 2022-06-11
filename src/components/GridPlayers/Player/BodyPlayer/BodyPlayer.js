@@ -7,23 +7,23 @@ export const BodyPlayer = ({playerState}) => {
   return (
     <Container>
       <Row>
-        <Col xs={4}>
+        <Col xs={12}>
           <Overall playerState={playerState}/>
         </Col>
-        <Col xs={8}>
-          <Row>
+        <Col xs={12}>
+          <Row className='row_score row_score_bck_solo'>
             <Col>
-              Solo <Partial playerState={playerState.solo}/>
+              <span className='label_type'>Solo</span> <Partial playerState={playerState.solo}/>
             </Col>
           </Row>
-          <Row>
+          <Row className='row_score row_score_bck_duo'>
             <Col>
-              Due <Partial playerState={playerState.duo}/>
+            <span className='label_type'>Duo</span> <Partial playerState={playerState.duo}/>
             </Col>
           </Row>
-          <Row>
+          <Row className='row_score row_score_bck_squad'>
             <Col>
-              Squad <Partial playerState={playerState.squad}/>
+            <span className='label_type'>Squad</span> <Partial playerState={playerState.squad}/>
             </Col>
           </Row>
         </Col>

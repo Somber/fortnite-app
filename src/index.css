@@ -49,7 +49,7 @@ input {
   margin-left: 0;
   margin-right: 20px;
   margin-top: 25px;
-  width: 520px;
+  width: 320px;
 }
 
 .card-header {
@@ -67,7 +67,6 @@ input {
   justify-content: space-between;
 }
 
-
 .card-title {
   color: rgb(71, 109, 71);
   font-size: 2rem!important;
@@ -75,16 +74,6 @@ input {
   text-align: center;
 }
 
-.card_lastgame {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 0.6rem!important;
-  justify-content: space-between;
-}
-
-.card_lastgame span {
-  font-weight: bolder;
-}
 
 .card_score .row{
   display: flex;
@@ -98,10 +87,6 @@ input {
   margin: 10px;
   margin-top:0;
   padding: 0;
-}
-
-.right {
-  text-align: right;
 }
 
 .card_close {
@@ -122,12 +107,63 @@ input {
   width: 24px;
 }
 
-.score_text {
+.score_text, .row_score{
   font-size: 0.8rem;
   font-weight: bolder;
 }
 
-.score_text_partial {
-  font-size: 0.60rem;
-  font-weight: bolder;
+.row_score {
+  border:  1.5px solid rgb(78, 103, 194);
+  border-radius: 0.25rem;
+  margin-bottom: 3px;
+}
+
+.row_score_bck_solo {
+  background-color: rgb(214, 190, 190);
+}
+.row_score_bck_solo .label_type {
+  color: rgb(204, 72, 72);
+}
+
+
+.row_score_bck_duo {
+  background-color: rgb(200, 226, 206);
+}
+.row_score_bck_duo .label_type {
+  color: rgb(38, 221, 81);
+}
+
+.row_score_bck_squad {
+  background-color: rgb(219, 191, 218);
+}
+.row_score_bck_squad .label_type {
+  color: rgb(214, 30, 208);
+}
+/* RESPONSIVE
+   ========================================================================= */
+ 
+/* Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1199px) { 
+  /* .card-body {
+    background-color: green;
+  }     */
+}
+ 
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  /* .card-body {
+    background-color: red;
+  }   */
+}
+ 
+/* Móviles en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 480px) {  /* xs */
+  
+  /* .card-body {
+    background-color: gray;
+  } */
+
 }
