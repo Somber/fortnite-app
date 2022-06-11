@@ -67,6 +67,7 @@ export default function Score({partial}) {
           </Col>
         </Row>
       </Container>
+      <ReactTooltip />
     </>
   )
 }
