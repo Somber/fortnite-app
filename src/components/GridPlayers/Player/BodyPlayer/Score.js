@@ -7,7 +7,7 @@ import winImg from '../../../../images/wins.png';
 import matchImg from '../../../../images/matches.png';
 import ReactTooltip from 'react-tooltip';
 
-export default function Score({partial}) {
+export default function Score({player}) {
   return (
     <>
       <Container className='card_score card_score_partial'>
@@ -20,7 +20,7 @@ export default function Score({partial}) {
             </Row>
             <Row>
               <Col>
-                <span data-tip="Partidas jugadas" className='score_text '>{partial ? partial.matches : 0}</span>
+                <span data-tip="Partidas jugadas" className='score_text '>{player ? player.matches : 0}</span>
               </Col>
             </Row>
           </Col>
@@ -32,7 +32,7 @@ export default function Score({partial}) {
             </Row>
             <Row>
               <Col>
-                <span data-tip="Partidas ganadas" className='score_text'>{partial ? partial.wins : 0}</span>          
+                <span data-tip="Partidas ganadas" className='score_text'>{player ? player.wins : 0}</span>          
               </Col>
             </Row>
           </Col>
@@ -44,7 +44,7 @@ export default function Score({partial}) {
             </Row>
             <Row>
               <Col>
-                <span data-tip="Bajas realizadas" className='score_text'>{partial ? partial.kills : 0}</span> 
+                <span data-tip="Bajas realizadas" className='score_text'>{player ? player.kills : 0}</span> 
               </Col>
             </Row>
           </Col>
@@ -56,14 +56,14 @@ export default function Score({partial}) {
             </Row>
             <Row>
               <Col>
-                <span data-tip="Muertes" className='score_text'>{partial ? partial.deaths : 0}</span> 
+                <span data-tip="Muertes" className='score_text'>{player ? player.deaths : 0}</span> 
               </Col>
             </Row>
           </Col>
         </Row>
         <Row className='row_partial_kd'>
           <Col>
-            <span>K/D: {partial ? partial.kd : 0}</span> 
+            <span>K/D: {player ? player.kd : 0}</span> 
           </Col>
         </Row>
       </Container>

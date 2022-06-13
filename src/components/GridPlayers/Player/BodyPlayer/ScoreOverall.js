@@ -6,7 +6,7 @@ import winImg from '../../../../images/wins.png';
 import matchImg from '../../../../images/matches.png';
 import ReactTooltip from 'react-tooltip';
 
-export default function ScoreOverall({overall}) {
+export default function ScoreOverall({player}) {
   return (
     <>
       <Container className='card_score'>
@@ -19,7 +19,7 @@ export default function ScoreOverall({overall}) {
             </Row>
             <Row>
               <Col>
-                <span data-tip="Partidas jugadas" className='score_overall_text '>{overall ? overall.matches : 0}</span>
+                <span data-tip="Partidas jugadas" className='score_overall_text '>{player ? player.matches : 0}</span>
               </Col>
             </Row>
           </Col>
@@ -31,7 +31,7 @@ export default function ScoreOverall({overall}) {
             </Row>
             <Row>
               <Col>
-                <span data-tip="Partidas ganadas" className='score_overall_text'>{overall ? overall.wins : 0}</span>          
+                <span data-tip="Partidas ganadas" className='score_overall_text'>{player ? player.wins : 0}</span>          
               </Col>
             </Row>
           </Col>
@@ -43,7 +43,7 @@ export default function ScoreOverall({overall}) {
             </Row>
             <Row>
               <Col>
-                <span data-tip="Bajas realizadas" className='score_overall_text'>{overall ? overall.kills : 0}</span> 
+                <span data-tip="Bajas realizadas" className='score_overall_text'>{player ? player.kills : 0}</span> 
               </Col>
             </Row>
           </Col>
@@ -55,7 +55,7 @@ export default function ScoreOverall({overall}) {
             </Row>
             <Row>
               <Col>
-                <span data-tip="Muertes" className='score_overall_text'>{overall ? overall.deaths : 0}</span> 
+                <span data-tip="Muertes" className='score_overall_text'>{player ? player.deaths : 0}</span> 
               </Col>
             </Row>
           </Col>

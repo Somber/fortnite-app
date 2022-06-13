@@ -1,11 +1,11 @@
 import React from 'react'
 import Score from './Score';
 
-export default function Partial({playerState}) {
+export default function Partial({player}) {
   return (
       <>
         <Score 
-          partial = {playerState ? playerState: null}
+          player = {player ? player: null}
         />
       </>
   )

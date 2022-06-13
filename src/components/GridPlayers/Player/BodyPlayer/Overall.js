@@ -2,13 +2,13 @@ import React from 'react'
 import ScoreOverall from './ScoreOverall';
 import { Card } from 'react-bootstrap';
 
-export default function Overall({playerState}) {
+export default function Overall({player}) {
   return (
       <>
         <ScoreOverall 
-          overall = {playerState.overall ? playerState.overall: null}
+          player = {player.overall ? player.overall: null}
         />
-        <Card.Title>K/D {playerState.overall ? playerState.overall.kd : ''}</Card.Title>
+        <Card.Title>K/D {player.overall ? player.overall.kd : ''}</Card.Title>
       </>
     
   )

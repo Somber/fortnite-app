@@ -1,36 +1,36 @@
-import React, { useState } from 'react'
-import PropTypes from "prop-types";
+import React , { useState }from 'react'
+import { getPlayer } from '../helpers/getPlayer';
 
-export default function AddPlayer({setPlayer}) {
+const AddPlayer = ({setPlayers}) => {
 
-  const LIMIT_CARDS = 3;
+    const [inputValue, setinputValue] = useState('');
 
-  const [inputValue, setinputValue] = useState('');
-
-  const handleInputChange = (e) => {
-    setinputValue(e.target.value)
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (inputValue.length>2){
-      setPlayer(players=> {
-        const playersTemp = players.map((p)=>p);
-
-        if (players.length>=LIMIT_CARDS){
-          playersTemp.pop()
-        } 
-
-        const result = [inputValue, ...playersTemp];
-        localStorage.setItem('players', result)
-        return result;
-      });  
-      
+    const handleInputChange = (e) => {
+        setinputValue(e.target.value)
     }
 
-    setinputValue("");
-  }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        getPlayer(inputValue)
+            .then(p => {
+                const playersTmp = localStorage.getItem('playersV2');
+                let players;
+
+                if (!playersTmp){
+                    players = [p];
+
+                } else {
+                    players = [p, ...JSON.parse(playersTmp)];
+
+                }
+
+                localStorage.setItem('playersV2', JSON.stringify(players));
+                setPlayers(players);
+            });
+
+        setinputValue("");
+    }
 
   return (
     <>
@@ -47,7 +47,4 @@ export default function AddPlayer({setPlayer}) {
   )
 }
 
-AddPlayer.propTypes = {
-  setPlayer: PropTypes.func.isRequired
-}
-
+export default AddPlayer;

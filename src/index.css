@@ -171,9 +171,7 @@ input {
 /* Tablets en horizonal y escritorios normales
    ------------------------------------------------------------------------- */
 @media (max-width: 1199px) {  /* lg */
-  .card {
 
-  }
 }
  
 @media (max-width: 991px) {  /* lg */
@@ -189,15 +187,17 @@ input {
   .card {
     width: 100%;
   }
+
+  #inputSearch{
+    width: 89%;
+  }
 }
  
 /* Móviles en horizontal o tablets en vertical
    ------------------------------------------------------------------------- */
-   @media (max-width: 575px) { /* xs */
-    .card {
-      width: 100%;
-    }
-  }
+@media (max-width: 575px) { /* xs */
+
+}
 
 
 

@@ -1,30 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Card } from 'react-bootstrap';
-import { getPlayer } from '../../../helpers/getPlayer';
 import { BodyPlayer } from './BodyPlayer/BodyPlayer';
 import { HeaderPlayer } from './HeaderPlayer';
 
 
-export default function Player({player, setPlayer}) {
-
-    const [playerState, setPlayerState] = useState({
-      name: "",
-      level: 0,
-      overall: null,
-    })
-
-    useEffect(()=>{
-      getPlayer(player).then(p => setPlayerState(p));
-    }, [])     
+export default function Player({player, setPlayers}) {
 
     return (
       <>
           <Card border="primary">
             <Card.Header className='card_header'>
-              <HeaderPlayer player = {player} playerState = {playerState} setPlayer = {setPlayer} />
+              <HeaderPlayer player = {player} setPlayers={setPlayers} />
             </Card.Header>
             <Card.Body>
-              <BodyPlayer playerState = {playerState}/>
+              <BodyPlayer player = {player}/>
             </Card.Body>
           </Card>
       </>
