@@ -6,6 +6,9 @@ body {
   background-color: rgb(18, 45, 134)!important;
   padding: 50px;
   padding-top: 10px;
+  background-image: url(./images/fondo.jpg);
+  
+  background-size: cover;
 }
 
 
