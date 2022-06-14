@@ -2,17 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { getPlayer } from '../helpers/getPlayer';
 import AddPlayer from './AddPlayer';
 import { GridPlayers } from './GridPlayers/GridPlayers';
-
+// import moment from 'moment';
 
 export default function FortniteApp() {
 
     const [ players, setPlayers ] = useState([]);
-
-    function delay(delay) {
-      return new Promise(function(resolve) {
-          setTimeout(resolve, delay);
-      });
-    }
 
     useEffect(()=>{
       const playersStg = localStorage.getItem('playersV2');
@@ -27,25 +21,38 @@ export default function FortniteApp() {
         if (playersStg){
           const playersJson = JSON.parse(playersStg);
 
-          playersJson.map((p)=>{
-            delay(10000);
-              getPlayer(p.name)
-              .then(p2 => {
-                if (p2.overall){
-                  setPlayers((playersUseState)=>{
+          const pTemp = [...playersJson];
+          pTemp.sort((a,b)=>{
+            if (a.update > b.update) {
+              return 1;
+            }
+            if (a.update < b.update) {
+              return -1;
+            }
+            return 0;
+          });
+          const currentPlayer = pTemp[0];
+
+          if (currentPlayer){
+            getPlayer(currentPlayer.name)
+            .then(p => {
+              if (p.overall){
+                setPlayers((playersUseState)=>{
                     const t = playersUseState.map((pus)=>{
-                      return pus.name !== p2.name ? pus : p2;
+                      return pus.name !== p.name ? pus : p;
                     });
                     localStorage.setItem('playersV2', JSON.stringify(t));
                     return t;
-                  });
-                }
-              })              
-              return p;
-          });
+                });
+              }
+            })              
+              
+          }
+
         }
-  
-      }, 30000);
+        
+      }, 15000);
+      
     }, []);
     
     return (

@@ -75,6 +75,10 @@ input {
   text-align: center;
 }
 
+.card-footer {
+  text-align: right;
+  font-size: 0.6rem;
+}
 
 .card_score .row{
   display: flex;

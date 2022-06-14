@@ -18,7 +18,7 @@ export const getPlayer = async (player)=>{
         solo: data ? data.stats.all.solo : null,
         duo: data ? data.stats.all.duo : null,
         squad: data ? data.stats.all.squad : null,
-
+        update: Date.now()
     };
 
     return playerObj;

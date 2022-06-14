@@ -1,8 +1,8 @@
 import React from 'react'
-import { Card } from 'react-bootstrap';
+import { Card, Row, Col } from 'react-bootstrap';
 import { BodyPlayer } from './BodyPlayer/BodyPlayer';
 import { HeaderPlayer } from './HeaderPlayer';
-
+import Moment from 'react-moment';
 
 export default function Player({player, setPlayers}) {
 
@@ -15,6 +15,13 @@ export default function Player({player, setPlayers}) {
             <Card.Body>
               <BodyPlayer player = {player}/>
             </Card.Body>
+            <Card.Footer>
+              <Row>
+                <Col>
+                  Last Update: <Moment format="D MMM YYYY HH:mm:ss">{player.update}</Moment>
+                </Col>
+              </Row>
+            </Card.Footer>
           </Card>
       </>
     
