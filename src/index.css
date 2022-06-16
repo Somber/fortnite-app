@@ -39,9 +39,9 @@ input {
   background-color: rgb(163, 176, 221);
   color: rgb(255, 255, 255);
   font-size: 1.3rem;
-  margin-left: 10px!important;
-  margin-top: 10px!important;
-  width: 250px;
+  margin-left: 5px!important; 
+  margin-top: 0!important;
+  width: 230px;
 }
 
 .col {
@@ -178,6 +178,13 @@ input {
   border-image: url(./images/border.png) 30 !important;  
 }
 
+#buttonSearch {
+  padding: 2px 4px;
+  margin-left: 10px;
+  margin-top: 0px;
+}
+
+
 /* RESPONSIVE
    ========================================================================= */
  
@@ -191,8 +198,8 @@ input {
   .card {
     width: 45%;
   }
+ 
 }
-
 
 /* Móviles en horizontal o tablets en vertical
    ------------------------------------------------------------------------- */
@@ -204,8 +211,16 @@ input {
   #inputSearch{
     width: 89%;
   }
+
+  #buttonSearch {
+    width: 89%;
+    margin-top: 1px;
+    margin-left: 5px;
+  }
+
 }
  
+
 /* Móviles en horizontal o tablets en vertical
    ------------------------------------------------------------------------- */
 @media (max-width: 575px) { /* xs */

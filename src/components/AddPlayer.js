@@ -1,4 +1,5 @@
 import React , { useState }from 'react'
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { getPlayer } from '../helpers/getPlayer';
 
 const AddPlayer = ({setPlayers}) => {
@@ -51,17 +52,22 @@ const AddPlayer = ({setPlayers}) => {
     }
 
   return (
-    <>
+    <Container>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="inputSearch">Buscar Jugador</label>
-        <input 
-          id='inputSearch'
-          type="text"
-          value={inputValue}
-          onChange={handleInputChange}
-        />
+        <Row>
+          <Col>
+            <label htmlFor="inputSearch">Buscar Jugador</label>
+            <input 
+                id='inputSearch'
+                type="text"
+                value={inputValue}
+                onChange={handleInputChange}
+            />
+            <Button type="submit" id="buttonSearch">Busca</Button>
+          </Col>
+        </Row>
       </form>
-    </>
+    </Container>
   )
 }
 
