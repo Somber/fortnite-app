@@ -11,8 +11,34 @@ export const HeaderPlayer = ({player, setPlayers}) => {
             return p.name !== player.name;
           });
   
-          localStorage.setItem('playersV2', JSON.stringify(newPlayers));
-          return newPlayers;
+          let resultPlayers;
+
+          if (newPlayers && newPlayers.length > 0) {
+            const copyListItems = [...newPlayers];
+            copyListItems.sort((a,b)=>{
+              if (a.overall.kd > b.overall.kd) {
+                return 1;
+              }
+              if (a.overall.kd < b.overall.kd) {
+                return -1;
+              }
+              return 0;
+            });
+            copyListItems.reverse();
+            const kdPlayer = copyListItems[0]
+  
+            const t = newPlayers.map((pus)=>{
+              pus.kd = kdPlayer.name === pus.name;
+              return pus;
+            });
+
+            resultPlayers = t;
+          } else {
+            resultPlayers = newPlayers;
+          }
+
+          localStorage.setItem('playersV2', JSON.stringify(resultPlayers));
+          return resultPlayers;
         });  
       };
 

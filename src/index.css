@@ -172,6 +172,12 @@ input {
   font-size: 0.8rem;
 }
 
+.winter{
+  border: 10px solid transparent!important;
+  padding: 2px;
+  border-image: url(./images/border.png) 30 !important;  
+}
+
 /* RESPONSIVE
    ========================================================================= */
  

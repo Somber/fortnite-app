@@ -55,6 +55,7 @@ export default function Player({player, players, setPlayers, drag, setDrag}) {
             onDragStart={(e) => dragStart(e)} 
             onDragEnter={(e) => dragEnter(e)}
             onDragEnd={drop}
+            className={player.kd ? 'winter' : ''}
             draggable 
             border="primary">
           <Card.Header className='card_header'>
