@@ -20,18 +20,18 @@ const AddPlayer = ({setPlayers}) => {
     }
 
   return (
-    <Container>
+    <Container fluid>
       <form onSubmit={handleSubmit}>
         <Row>
           <Col>
-            <label htmlFor="inputSearch">Buscar Jugador</label>
             <input 
                 id='inputSearch'
                 type="text"
+                placeholder='Introduce jugador a buscar'
                 value={inputValue}
                 onChange={handleInputChange}
             />
-            <Button type="submit" id="buttonSearch">Busca</Button>
+            <Button type="submit" id="buttonSearch">Buscar</Button>
           </Col>
         </Row>
       </form>

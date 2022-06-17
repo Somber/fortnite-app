@@ -11,12 +11,6 @@ body {
   background-size: cover;
 }
 
-
-form label {
-  color: rgb(18, 45, 134);
-  font-weight: 900;
-}
-
 .title_app {
   background-image: url(./images/logo.jpg);
   border: 1px solid rgb(70, 77, 53);
@@ -47,11 +41,12 @@ input {
 
 .col {
   margin:0!important;
+  padding:0!important;
 }
 .card {
   background-color: rgb(163, 176, 221)!important;
   margin-left: 0;
-  margin-right: 20px;
+  margin-right: 5px;
   margin-top: 25px;
   width: 300px;
 }
@@ -211,13 +206,14 @@ input {
   }
 
   #inputSearch{
-    width: 89%;
+    width: 100%;
+    margin-left: 0!important;
   }
 
   #buttonSearch {
-    width: 89%;
+    width: 100%;
     margin-top: 1px;
-    margin-left: 5px;
+    margin-left: 0px;
   }
 
 }
