@@ -174,6 +174,19 @@ input {
   border-image: url(./images/border.png) 30 !important;  
 }
 
+.silver{
+  border: 10px solid transparent!important;
+  padding: 2px;
+  border-image: url(./images/border-plata.png) 30 !important;  
+}
+
+.bronce{
+  border: 10px solid transparent!important;
+  padding: 2px;
+  border-image: url(./images/border-bronce.png) 30 !important;  
+}
+
+
 #buttonSearch {
   padding: 2px 4px;
   margin-left: 10px;

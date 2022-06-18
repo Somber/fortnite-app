@@ -48,16 +48,20 @@ const useStatePlayer = () => {
                   return 0;
                 });
                 copyListItems.reverse();
-                const kdPlayer = copyListItems[0]
+                const kdPlayer = copyListItems[0];
+                const kdPlayerPlata = copyListItems.length > 1 ? copyListItems[1] : false; 
+                const kdPlayerBronce = copyListItems.length > 2 ? copyListItems[2] : false; 
 
-                  const t = playersUseState.map((pus)=>{
-                    const result = pus.name !== p.name ? pus : p;
-                    result.kd = kdPlayer.name === pus.name;
-                    return result;
-                  });
+                const t = playersUseState.map((pus)=>{
+                  const result = pus.name !== p.name ? pus : p;
+                  result.kd = kdPlayer.name === pus.name;
+                  result.kdPlata = kdPlayerPlata.name === pus.name;
+                  result.kdBronce = kdPlayerBronce.name === pus.name;                  
+                  return result;
+                });
 
-                  localStorage.setItem('playersV2', JSON.stringify(t));
-                  return t;
+                localStorage.setItem('playersV2', JSON.stringify(t));
+                return t;
               });
             }
           })              

@@ -48,6 +48,9 @@ export default function Player({player, players, setPlayers, drag, setDrag}) {
 
   };
 
+
+
+
   return (
     <>
         <Card 
@@ -55,7 +58,7 @@ export default function Player({player, players, setPlayers, drag, setDrag}) {
             onDragStart={(e) => dragStart(e)} 
             onDragEnter={(e) => dragEnter(e)}
             onDragEnd={drop}
-            className={player.kd ? 'winter' : ''}
+            className={(player.kd ? 'winter' : (player.kdPlata ? 'silver' : (player.kdBronce ? 'bronce' : '')))}
             draggable 
             border="primary">
           <Card.Header className='card_header'>

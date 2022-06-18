@@ -20,10 +20,14 @@ const removePlayer = (player, setPlayers) => {
         return 0;
       });
       copyListItems.reverse();
-      const kdPlayer = copyListItems[0]
+      const kdPlayer = copyListItems[0];
+      const kdPlayerPlata = copyListItems.length > 1 ? copyListItems[1] : false; 
+      const kdPlayerBronce = copyListItems.length > 2 ? copyListItems[2] : false; 
 
       const t = newPlayers.map((pus)=>{
         pus.kd = kdPlayer.name === pus.name;
+        pus.kdPlata = kdPlayerPlata.name === pus.name;
+        pus.kdBronce = kdPlayerBronce.name === pus.name;          
         return pus;
       });
 
