@@ -63,11 +63,11 @@ export default function Score({player}) {
         </Row>
         <Row className='row_partial_kd'>
           <Col>
-            <span>K/D: {player ? player.kd : 0}</span> 
+            <span data-tip="Proporción entre bajas realizadas y muertes">K/D: {player ? player.kd : 0}</span> 
           </Col>
         </Row>
       </Container>
-      <ReactTooltip />
+      <ReactTooltip backgroundColor='rgb(78, 103, 194)'/>
     </>
   )
 }

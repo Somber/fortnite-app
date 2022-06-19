@@ -61,7 +61,7 @@ export default function ScoreOverall({player}) {
           </Col>
         </Row>
       </Container>
-      <ReactTooltip />
+      <ReactTooltip backgroundColor='rgb(78, 103, 194)'/>
     </>
   )
 }

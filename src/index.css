@@ -68,9 +68,9 @@ input {
 }
 
 .card-title {
-  margin-top: 10px!important;
+  margin: 0px!important;
   color: rgb(71, 109, 71);
-  font-size: 1.5rem!important;
+  font-size: 1.2rem!important;
   font-weight: bold!important;
   text-align: center;
 }
@@ -169,6 +169,10 @@ input {
   font-size: 0.8rem;
 }
 
+.label_type{
+  margin-left: 10px;
+}
+
 .winter{
   border: 10px solid transparent!important;
   padding: 2px;
@@ -195,7 +199,10 @@ input {
   background-color: rgb(78, 103, 194);
 }
 
-
+.img-kd {
+  width: 48px;  
+  margin-right: 6px;
+}
 
 
 /* RESPONSIVE

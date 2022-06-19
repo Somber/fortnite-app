@@ -70,7 +70,7 @@ export default function Player({player, players, setPlayers, drag, setDrag}) {
           <Card.Footer>
             <Row>
               <Col>
-                Last Update: <Moment format="D MMM YYYY HH:mm:ss">{player.update}</Moment>
+                Última actualización: <Moment format="D MMM YYYY HH:mm:ss">{player.update}</Moment>
               </Col>
             </Row>
           </Card.Footer>
