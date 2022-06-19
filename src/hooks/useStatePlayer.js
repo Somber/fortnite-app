@@ -17,9 +17,7 @@ const useStatePlayer = () => {
 
       if (playersStg){
         const playersJson = JSON.parse(playersStg);
-
-        const pTemp = [...playersJson];
-        pTemp.sort((a,b)=>{
+        playersJson.sort((a,b)=>{
           if (a.update > b.update) {
             return 1;
           }
@@ -28,7 +26,7 @@ const useStatePlayer = () => {
           }
           return 0;
         });
-        const currentPlayer = pTemp[0];
+        const currentPlayer = playersJson[0];
 
         if (currentPlayer){
           getPlayer(currentPlayer.name)
@@ -38,6 +36,8 @@ const useStatePlayer = () => {
               setPlayers((playersUseState)=>{
                 
                 const copyListItems = [...playersUseState];
+
+                // TIENE QUE ORDERNAR POR LA SUMA DE LOS KDs PARCIALES Y NO POR EL TOTAL. 
                 copyListItems.sort((a,b)=>{
                   if (a.overall.kd > b.overall.kd) {
                     return 1;
