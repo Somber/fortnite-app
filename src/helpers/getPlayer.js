@@ -10,30 +10,32 @@ export const getPlayer = async (player)=>{
     });
 
     const {data} = await resp.json();
-    let overall = null;
 
-    if (data && data.stats.all.overall){
-      overall = data.stats.all.overall;
+    // let overall = null;
 
-      let kills = 0;
-      let deaths = 0;
+    // if (data && data.stats.all.overall){
+    //   overall = data.stats.all.overall;
 
-      kills = kills + (data.stats.all.solo ? data.stats.all.solo.kills : 0);
-      kills = kills + (data.stats.all.duo ? data.stats.all.duo.kills : 0);
-      kills = kills + (data.stats.all.squad ? data.stats.all.squad.kills : 0);
+    //   let kills = 0;
+    //   let deaths = 0;
 
-      deaths = deaths + (data.stats.all.solo ? data.stats.all.solo.deaths : 0);
-      deaths = deaths + (data.stats.all.duo ? data.stats.all.duo.deaths : 0);
-      deaths = deaths + (data.stats.all.squad ? data.stats.all.squad.deaths : 0);
+    //   kills = kills + (data.stats.all.solo ? data.stats.all.solo.kills : 0);
+    //   kills = kills + (data.stats.all.duo ? data.stats.all.duo.kills : 0);
+    //   kills = kills + (data.stats.all.squad ? data.stats.all.squad.kills : 0);
 
-      overall.kd = (kills / deaths).toFixed(3);
+    //   deaths = deaths + (data.stats.all.solo ? data.stats.all.solo.deaths : 0);
+    //   deaths = deaths + (data.stats.all.duo ? data.stats.all.duo.deaths : 0);
+    //   deaths = deaths + (data.stats.all.squad ? data.stats.all.squad.deaths : 0);
+
+    //   overall.kd = (kills / deaths).toFixed(3);
       
-    } 
+    // } 
 
     const playerObj = {
         name: player,
         level: data ? data.battlePass.level : 0,
-        overall: overall,
+        // overall: overall,
+        overall: data ? data.stats.all.overall : null,
         solo: data ? data.stats.all.solo : null,
         duo: data ? data.stats.all.duo : null,
         squad: data ? data.stats.all.squad : null,

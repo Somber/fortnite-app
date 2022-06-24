@@ -4,10 +4,16 @@ import { getPlayer } from '../helpers/getPlayer';
 const useStatePlayer = () => {
 
   const [ players, setPlayers ] = useState([]);
+  const [ sizeCards, setSizeCards] = useState('Minis');
 
   useEffect(()=>{
-    const playersStg = localStorage.getItem('playersV2');
 
+    const sizeCardsTemp = localStorage.getItem('sizeCards');
+    if (sizeCardsTemp){
+      setSizeCards(sizeCardsTemp);
+    }
+
+    const playersStg = localStorage.getItem('playersV2');
     if (playersStg){
       setPlayers(JSON.parse(playersStg));
     }
@@ -77,7 +83,9 @@ const useStatePlayer = () => {
 
   return ([
     players,
-    setPlayers
+    setPlayers,
+    sizeCards, 
+    setSizeCards
   ])
 }
 

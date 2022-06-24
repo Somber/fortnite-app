@@ -3,7 +3,10 @@ import Overall from './Overall';
 import Partial from './Partial';
 import { Container, Row, Col } from 'react-bootstrap';
 
-export const BodyPlayer = ({player}) => {
+export const BodyPlayer = ({
+    player, 
+    sizeCards}) => {
+
   return (
     <Container fluid>
       <Row>
@@ -11,7 +14,7 @@ export const BodyPlayer = ({player}) => {
           <Overall player={player}/>
         </Col>
         <Col xs={12}>
-          <Row className='row_score row_score_bck_solo'>
+          <Row className={(sizeCards == "Maxis" ? 'hidden' : '')  +' row_score row_score_bck_solo'}>
             <Col xs={3}>
               <span className='label_type'>Solo</span>
             </Col>
@@ -19,7 +22,7 @@ export const BodyPlayer = ({player}) => {
               <Partial player={player.solo}/>
             </Col>
           </Row>
-          <Row className='row_score row_score_bck_duo'>
+          <Row className={(sizeCards == "Maxis" ? 'hidden' : '')+' row_score row_score_bck_duo'}>
             <Col xs={3}>
               <span className='label_type'>Duo</span>
             </Col>
@@ -27,7 +30,7 @@ export const BodyPlayer = ({player}) => {
               <Partial player={player.duo}/>
             </Col>
           </Row>
-          <Row className='row_score row_score_bck_squad'>
+          <Row className={(sizeCards == "Maxis" ? 'hidden' : '') +' row_score row_score_bck_squad'}>
             <Col xs={3}>
               <span className='label_type'>Squad</span>
             </Col>
@@ -35,7 +38,7 @@ export const BodyPlayer = ({player}) => {
               <Partial player={player.squad}/>
             </Col>
           </Row>
-          <Row className='row_score row_score_bck_ltm'>
+          <Row className={(sizeCards == "Maxis" ? 'hidden' : '') +' row_score row_score_bck_ltm'}>
             <Col xs={3}>
               <span className='label_type'>LTM</span>
             </Col>

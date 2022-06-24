@@ -4,7 +4,7 @@ import { BodyPlayer } from './BodyPlayer/BodyPlayer';
 import { HeaderPlayer } from './HeaderPlayer';
 import Moment from 'react-moment';
 
-export default function Player({player, players, setPlayers, drag, setDrag}) {
+export default function Player({player, players, setPlayers, drag, setDrag, sizeCards}) {
 
   const dragStart = (e) => {
     if (e.target.id.substring(0,3) === 'id_'){
@@ -48,9 +48,6 @@ export default function Player({player, players, setPlayers, drag, setDrag}) {
 
   };
 
-
-
-
   return (
     <>
         <Card 
@@ -65,7 +62,7 @@ export default function Player({player, players, setPlayers, drag, setDrag}) {
             <HeaderPlayer player = {player} setPlayers={setPlayers} />
           </Card.Header>
           <Card.Body>
-            <BodyPlayer player = {player}/>
+            <BodyPlayer player = {player} sizeCards={sizeCards}/>
           </Card.Body>
           <Card.Footer>
             <Row>
