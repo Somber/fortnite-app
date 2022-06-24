@@ -12,13 +12,18 @@ export const HeaderPlayer = ({player, setPlayers}) => {
 
   return (
     <Container>
-      <Row className='row_player_main'>
+      <Row className='row_player_main align-items-center'>
         <Col>
-          <span>{player.name} - Nivel {player.level ? player.level : 0}</span>
+          <span>{player.name}</span>
+        </Col>
+        <Col className='col_player_level'>
+            <span>Nivel {player.level ? player.level : 0}</span>
         </Col>
         <Col xs={1}>
           <button className='card_close' type='button' onClick={handleClick}>x</button>
         </Col>                  
+      </Row>
+      <Row>
       </Row>
       <Row className='row_player_detail'>
         <Col xs={7}>

@@ -5,30 +5,42 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 export const BodyPlayer = ({player}) => {
   return (
-    <Container>
+    <Container fluid>
       <Row>
         <Col xs={12}>
           <Overall player={player}/>
         </Col>
         <Col xs={12}>
           <Row className='row_score row_score_bck_solo'>
+            <Col xs={3}>
+              <span className='label_type'>Solo</span>
+            </Col>
             <Col>
-              <span className='label_type'>Solo</span> <Partial player={player.solo}/>
+              <Partial player={player.solo}/>
             </Col>
           </Row>
           <Row className='row_score row_score_bck_duo'>
+            <Col xs={3}>
+              <span className='label_type'>Duo</span>
+            </Col>
             <Col>
-            <span className='label_type'>Duo</span> <Partial player={player.duo}/>
+              <Partial player={player.duo}/>
             </Col>
           </Row>
           <Row className='row_score row_score_bck_squad'>
+            <Col xs={3}>
+              <span className='label_type'>Squad</span>
+            </Col>
             <Col>
-            <span className='label_type'>Squad</span> <Partial player={player.squad}/>
+              <Partial player={player.squad}/>
             </Col>
           </Row>
           <Row className='row_score row_score_bck_ltm'>
+            <Col xs={3}>
+              <span className='label_type'>LTM</span>
+            </Col>
             <Col>
-            <span className='label_type'>LTM</span> <Partial player={player.ltm}/>
+              <Partial player={player.ltm}/>
             </Col>
           </Row>
         </Col>
