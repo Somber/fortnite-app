@@ -26,6 +26,11 @@ export const BodyPlayer = ({player}) => {
             <span className='label_type'>Squad</span> <Partial player={player.squad}/>
             </Col>
           </Row>
+          <Row className='row_score row_score_bck_ltm'>
+            <Col>
+            <span className='label_type'>LTM</span> <Partial player={player.ltm}/>
+            </Col>
+          </Row>
         </Col>
       </Row>        
     </Container>

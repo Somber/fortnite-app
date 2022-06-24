@@ -12,29 +12,21 @@ export const getPlayer = async (player)=>{
     const {data} = await resp.json();
     let overall = null;
 
-    if (data){
+    if (data && data.stats.all.overall){
       overall = data.stats.all.overall;
 
-      const solo = data.stats.all.solo ? data.stats.all.solo.kd : 0;
-      const duo = data.stats.all.duo ? data.stats.all.duo.kd : 0;
-      const squad = data.stats.all.squad ? data.stats.all.squad.kd : 0;
+      let kills = 0;
+      let deaths = 0;
 
-      let cont = 0;
-      if (data.stats.all.solo){
-        cont++;
-      }
-      if (data.stats.all.duo){
-        cont++;
-      }
-      if (data.stats.all.squad){
-        cont++;
-      }
+      kills = kills + (data.stats.all.solo ? data.stats.all.solo.kills : 0);
+      kills = kills + (data.stats.all.duo ? data.stats.all.duo.kills : 0);
+      kills = kills + (data.stats.all.squad ? data.stats.all.squad.kills : 0);
 
-      if (cont>0){
-        overall.kd = ((solo+duo+squad) / cont).toFixed(3);
-        // console.log(new Intl.NumberFormat('en-EN', { maximumSignificantDigits: 3 }).format(overall.kd));
+      deaths = deaths + (data.stats.all.solo ? data.stats.all.solo.deaths : 0);
+      deaths = deaths + (data.stats.all.duo ? data.stats.all.duo.deaths : 0);
+      deaths = deaths + (data.stats.all.squad ? data.stats.all.squad.deaths : 0);
 
-      }
+      overall.kd = (kills / deaths).toFixed(3);
       
     } 
 
@@ -45,6 +37,7 @@ export const getPlayer = async (player)=>{
         solo: data ? data.stats.all.solo : null,
         duo: data ? data.stats.all.duo : null,
         squad: data ? data.stats.all.squad : null,
+        ltm: data ? data.stats.all.ltm : null,
         update: Date.now()
     };
 

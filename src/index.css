@@ -163,6 +163,16 @@ input {
   font-size: 1rem;
 }
 
+.row_score_bck_ltm {
+  background-color: rgb(220, 232, 173);
+}
+.row_score_bck_ltm .label_type {
+  color: rgb(150, 170, 70);
+  text-shadow: -1px 1px 1px #000000;
+  font-size: 1rem;
+}
+
+
 .row_partial_kd {
   color: green;
   font-weight: bolder;

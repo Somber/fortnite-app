@@ -6,7 +6,7 @@ export const OrderPlayers = () => {
 
   return (
     <>
-        <div>{miTexto}</div>
+        <div className='order_players'>{miTexto}</div>
     </>
 
   )

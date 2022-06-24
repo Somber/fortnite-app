@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import AddPlayer from './components/AddPlayer';
 import { GridPlayers } from './components/GridPlayers/GridPlayers';
-import { OrderPlayers } from './components/OrderPlayers';
+// import { OrderPlayers } from './components/OrderPlayers';
 import useStatePlayer from './hooks/useStatePlayer';
 
 export default function FortniteApp() {
@@ -15,12 +15,12 @@ export default function FortniteApp() {
         <hr/>
         <Container fluid>
           <Row>
-            <Col>
+            <Col >
               <AddPlayer setPlayers = {setPlayers}/>
             </Col>    
-            <Col>
+            {/* <Col>
               <OrderPlayers />
-            </Col>    
+            </Col>     */}
           </Row>
           <Row >
             <Col xd={12}>
