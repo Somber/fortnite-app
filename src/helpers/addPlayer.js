@@ -2,6 +2,13 @@ import { getPlayer } from '../helpers/getPlayer';
 
 export const addPlayer = (inputValue, setPlayers) => {
 
+    const playersTmp = localStorage.getItem('playersV2');
+    const playersL = JSON.parse(playersTmp);
+
+    if (playersL.find(p=>p.name === inputValue)){
+      return;
+    }
+
     getPlayer(inputValue)
     .then(p => {
       
