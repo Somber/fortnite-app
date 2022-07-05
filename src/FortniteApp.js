@@ -22,10 +22,10 @@ export default function FortniteApp() {
         <hr/>
         <Container fluid>
           <Row>
-            <Col>
+            <Col md={12} lg={'auto'}>
               <AddPlayer setPlayers = {setPlayers}/>
             </Col> 
-            <Col>
+            <Col md={12} lg={'auto'}>
               <button id="buttonSizeCards" className='btn btn-primary' onClick={handleSizeCards}>{sizeCards}</button>
             </Col>   
             {/* <Col>

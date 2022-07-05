@@ -110,6 +110,7 @@ input {
 .grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: start;
 }
 
 .hidden{
@@ -237,14 +238,35 @@ input {
 /* Tablets en horizonal y escritorios normales
    ------------------------------------------------------------------------- */
 @media (max-width: 1199px) {  /* lg */
-
 }
  
 @media (max-width: 991px) {  /* lg */
+
   .card {
     width: 45%;
   }
- 
+
+  #inputSearch{
+    width: 100%;
+    margin-left: 0!important;
+
+  }
+
+  #buttonSearch, #buttonSizeCards {
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 0px;
+  }
+
+
+  .grid {
+    /* justify-content: center; */
+  }
+
+  
+  body {
+    background-image: url(./images/fondo-mini.jpg);
+  } 
 }
 
 /* Móviles en horizontal o tablets en vertical
@@ -254,21 +276,6 @@ input {
     width: 100%;
   }
 
-  #inputSearch{
-    width: 100%;
-    margin-left: 0!important;
-
-  }
-
-  #buttonSearch {
-    width: 100%;
-    margin-top: 1px;
-    margin-left: 0px;
-  }
-
-  body {
-    background-image: url(./images/fondo-mini.jpg);
-  }  
 }
  
 

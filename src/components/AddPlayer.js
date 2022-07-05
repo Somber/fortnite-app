@@ -1,5 +1,5 @@
 import React , { useState }from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { addPlayer } from '../helpers/addPlayer';
 
 
@@ -20,22 +20,16 @@ const AddPlayer = ({setPlayers}) => {
     }
 
   return (
-    <Container fluid>
       <form onSubmit={handleSubmit}>
-        <Row>
-          <Col>
-            <input 
-                id='inputSearch'
-                type="text"
-                placeholder='Introduce jugador a buscar'
-                value={inputValue}
-                onChange={handleInputChange}
-            />
-            <Button type="submit" id="buttonSearch">Buscar</Button>
-          </Col>
-        </Row>
+        <input 
+            id='inputSearch'
+            type="text"
+            placeholder='Introduce jugador a buscar'
+            value={inputValue}
+            onChange={handleInputChange}
+        />
+        <Button type="submit" id="buttonSearch">Buscar</Button>
       </form>
-    </Container>
   )
 }
 
